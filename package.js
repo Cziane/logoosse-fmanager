@@ -14,7 +14,8 @@ Package.onUse(function(api) {
   api.versionsFrom('1.4.1.1');
   api.use('nimble:restivus');
   api.use('aldeed:collection2');
-  api.use('coffeescript')
+  api.use('coffeescript');
+  api.use('jparker:crypto-md5');
 
 });
 
