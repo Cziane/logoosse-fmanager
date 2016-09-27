@@ -1,8 +1,8 @@
 Meteor.methods
-	saveFile :(file,private=null,database=null)->
-	
-	delFile:(fileName)->
+	saveFile :(file , publish, fileManagername)->
+		Meteor[fileManager].saveFile file publish
+	deletFile:(file , fileManager)->
 
-	updateFile:(File, private=null,database=null)->
+	updateFile:(file , fileManager)->
 
 

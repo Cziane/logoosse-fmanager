@@ -12,11 +12,15 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.4.1.1');
+  //dependencies
   api.use('nimble:restivus');
   api.use('aldeed:collection2');
   api.use('coffeescript');
   api.use('jparker:crypto-md5');
 
+  //add files
+  api.addFiles('fdbschema.coffee','client');
+  api.addFiles(['fileManager.coffee','fdbschema.coffee','ffunctions.coffee','fmethods.coffee'],'server');
 });
 
 Package.onTest(function(api) {

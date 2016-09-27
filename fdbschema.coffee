@@ -1,13 +1,15 @@
+@Files = new Mongo.Collection("files");
 @FileSchemas={}
 
-Files= new SimpleSchema
+
+FileSchemas.Files= new SimpleSchema
 	name :
 		type :String
 		label :"name"
 		optional : false
 		index : 1
-	type :
-		type String
+	ftype :
+		type : String
 		label :"file type"
 		optional:false
 	size :
@@ -24,6 +26,10 @@ Files= new SimpleSchema
 		label :"Private file or not"
 		optional:false
 		defaultValue : true
+	secure :
+		type:[String]
+		label:"level access"
+		optional:true
 	hash :
 		type : String
 		label : "file hash to secure no contamination"
@@ -36,3 +42,5 @@ Files= new SimpleSchema
 	content :
 		type : String
 		optional:true
+
+Files.attachSchema(FileSchemas.Files)
