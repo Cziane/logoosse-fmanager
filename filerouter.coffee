@@ -5,4 +5,4 @@ if Meteor.isServer
 
 	ApiFile.addRoute 'fmanager/:fmanager/:fileName',
 		get:->
-			Meteor[fmanager]
+			Meteor[@urlParams.fmanager].loadFile  @urlParams.fileName null

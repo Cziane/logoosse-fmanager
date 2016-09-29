@@ -27,7 +27,7 @@ FileSchemas.Files= new SimpleSchema
 		optional:false
 		defaultValue : true
 	secure :
-		type:[String]
+		type:Object
 		label:"level access"
 		optional:true
 	hash :
