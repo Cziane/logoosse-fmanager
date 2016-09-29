@@ -1,7 +1,6 @@
 class @FileManager
-	constructor : (src, path='', mime=[], secure=null, sizeMax=0, database=false)->
-		@src=src
-		@mime=mim
+	constructor : (path='', mime=[], secure=null, sizeMax=0, database=false)->
+		@mime=mime
 		if !secure
 			@checkSecurity=defaultSecurity
 		else
